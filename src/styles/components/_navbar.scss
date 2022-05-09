@@ -1,0 +1,49 @@
+/* ======================================== */
+/* ================= Navbar =============== */
+/* ======================================== */
+
+.navbar {
+  align-items: center;
+  background-color: $bg-white;
+  display: flex;
+  flex-direction: row;
+  height: 72px;
+  justify-content: space-around;
+  position: static;
+
+  &__brand {
+    align-items: center;
+    display: flex;
+
+    &-logo {
+      margin-right: 3px;
+      width: 24.74px;
+    }
+
+    &-icons {
+      width: 39.74px;
+    }
+  }
+
+  &__login {
+    align-items: center;
+    background-color: $bg-white;
+    border: 1.5px solid $secondary;
+    color: $secondary;
+    display: flex;
+    font-size: 14px;
+    height: 40px;
+    justify-content: center;
+    width: 130px;
+  }
+
+  &__search {
+    align-items: center;
+    display: flex;
+
+    &-icon {
+      height: 20.05px;
+      width: 20.05px;
+    }
+  }
+}

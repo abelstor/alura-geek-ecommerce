@@ -1,0 +1,61 @@
+/* ======================================== */
+/* ================ Footer ================ */
+/* ======================================== */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+  }
+
+  &__about-content {
+    text-align: center;
+    line-height: 42px;
+  }
+
+  &__about-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__high {
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-blue;
+  }
+
+  &__low {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 102px;
+  }
+
+  &__low-copy {
+    display: flex;
+  }
+
+  &__low-description {
+    font-size: 0.9rem;
+  }
+}
+
+.abelstor {
+  font-weight: 600;
+
+  &:hover {
+    color: $secondary;
+  }
+}

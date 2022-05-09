@@ -1,0 +1,17 @@
+/* ======================================== */
+/* =============== MainScreen ============= */
+/* ======================================== */
+
+.mainscreen {
+  background-color: $bg-silver;
+  padding: 0 0 1rem 0;
+
+  &__items {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(152px, 2fr));
+    margin-bottom: 1rem;
+  }
+}

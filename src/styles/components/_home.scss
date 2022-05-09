@@ -1,0 +1,38 @@
+/* ======================================== */
+/* ================= Home ================= */
+/* ======================================== */
+
+.home {
+  align-items: flex-end;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/icons/banner.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  height: 192px;
+  z-index: 1;
+
+  &__banner {
+    display: flex;
+    color: $primary;
+    flex-direction: column;
+    padding: 1rem;
+
+    &-title {
+      font-size: 22px;
+    }
+
+    &-text {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    &-button {
+      background-color: $secondary;
+      border-style: none;
+      color: $primary;
+      height: 40px;
+      margin-top: 10px;
+      width: 118px;
+    }
+  }
+}
