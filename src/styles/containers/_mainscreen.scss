@@ -15,3 +15,10 @@
     margin-bottom: 1rem;
   }
 }
+
+@media screen and (max-width: 991px) {
+  .mainscreen__items > .modelmainscreen:nth-child(n + 5) {
+    visibility: hidden;
+    display: none;
+  }
+}

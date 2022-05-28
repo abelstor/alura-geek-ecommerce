@@ -1,16 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
-import { Home } from '../components/screens/Home';
-import { Navbar } from '../components/screens/Navbar';
 
-import '../styles/styles.scss';
+import { Login } from '../pages/Login';
+import { DashboardRoutes } from './DashboardRoutes';
 
 export const AppRouter = () => {
     return (
-        <>
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-            </Routes>
-        </>
+        <Routes>
+            <Route path="login" element={<Login />} />
+            <Route path="/*" element={<DashboardRoutes />} />
+        </Routes>
     )
 }

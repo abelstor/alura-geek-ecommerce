@@ -9,7 +9,7 @@
   flex-direction: row;
   height: 72px;
   justify-content: space-around;
-  position: static;
+  // position: static;
 
   &__brand {
     align-items: center;
@@ -45,5 +45,29 @@
       height: 20.05px;
       width: 20.05px;
     }
+  }
+
+  &__shopping {
+    position: relative;
+  }
+
+  &__shopping div {
+    align-items: center;
+    background-color: $bg-green;
+    border-radius: 50%;
+    display: flex;
+    font-weight: bold;
+    height: 21px;
+    justify-content: center;
+    position: absolute;
+    top: -13px;
+    right: -10px;
+    width: 21px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .navbar__search-icon {
+    display: none;
   }
 }

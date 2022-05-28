@@ -1,4 +1,4 @@
-import arrow from '../../assets/icons/arrow.png';
+import arrow from '../assets/icons/arrow.png';
 
 export const ModelHeaderScreen = ({ title }) => {
     return (

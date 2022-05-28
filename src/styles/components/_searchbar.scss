@@ -1,0 +1,51 @@
+/* ======================================== */
+/* ============== SearchBar =============== */
+/* ======================================== */
+
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-silver;
+  padding: 0 16px;
+  border-radius: 25px;
+  width: 272px;
+  height: 40px;
+
+  &__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: $bg-silver;
+    font-size: 14px;
+    color: $tertiary;
+
+    &::placeholder {
+      color: $quaternary;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    border-style: none;
+    background: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .searchbar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .searchbar {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .searchbar {
+    width: 393px;
+  }
+}

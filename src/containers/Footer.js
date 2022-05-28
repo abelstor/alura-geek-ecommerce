@@ -1,7 +1,8 @@
-import logo from '../../assets/icons/icon.png';
-import alura from '../../assets/icons/alura.png';
-import geek from '../../assets/icons/geek.png';
-import { FooterForm } from './FooterForm';
+import { FooterForm } from '../components/FooterForm';
+
+import logo from '../assets/icons/icon.png';
+import alura from '../assets/icons/alura.png';
+import geek from '../assets/icons/geek.png';
 
 export const Footer = () => {
 

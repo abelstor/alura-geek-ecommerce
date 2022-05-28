@@ -1,10 +1,12 @@
-import { MainScreen } from "../screens/MainScreen";
-import { Footer } from "./Footer";
+import { Footer } from '../containers/Footer';
+import { MainScreen } from '../containers/MainScreen';
+import { Navbar } from '../containers/Navbar';
 
 export const Home = () => {
 
     return (
         <>
+            <Navbar />
             <div className="home">
                 <div className="home__banner">
                     <h1 className="home__banner-title">

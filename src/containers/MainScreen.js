@@ -1,8 +1,7 @@
-import { starWarsList } from '../../helpers/itemsList';
-import { consolesList } from '../../helpers/itemsList';
-import { diversosList } from '../../helpers/itemsList';
-import { ModelMainScreen } from '../models/ModelMainScreen';
-import { ModelHeaderScreen } from '../models/ModelHeaderScreen';
+import { starWarsList, consolesList, diversosList } from '../helpers/itemsList';
+
+import { ModelMainScreen } from '../components/ModelMainScreen';
+import { ModelHeaderScreen } from '../components/ModelHeaderScreen';
 
 export const MainScreen = () => {
 

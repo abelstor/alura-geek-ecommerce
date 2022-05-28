@@ -16,6 +16,11 @@
   &__about-content {
     text-align: center;
     line-height: 42px;
+
+    & p:hover {
+      color: $secondary;
+      cursor: pointer;
+    }
   }
 
   &__about-logo {
