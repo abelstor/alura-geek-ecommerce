@@ -8,12 +8,15 @@
 @import "./pages/notfound";
 
 // Containers
-@import "./containers/navbar";
-@import "./containers/mainscreen";
 @import "./containers/footer";
+@import "./containers/mainscreen";
+@import "./containers/menu";
+@import "./containers/navbar";
 
 // Components
 @import "./components/footerform";
-@import "./components/modelheaderscreen";
-@import "./components/modelmainscreen";
+@import "./components/logo";
+@import "./components/headeritem";
+@import "./components/productitem";
 @import "./components/searchbar";
+@import "./components/myorder";

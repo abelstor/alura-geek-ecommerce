@@ -1,0 +1,33 @@
+/* ======================================== */
+/* ============== HeaderItem ============== */
+/* ======================================== */
+
+.headeritem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+
+  &__title {
+    color: $tertiary;
+    font-size: 22px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    &-text {
+      color: $secondary;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    &-arrow {
+      height: 13px;
+      margin-left: 5px;
+      width: 13px;
+    }
+  }
+}

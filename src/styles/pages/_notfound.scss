@@ -4,9 +4,10 @@
 
 .notfound__container {
   display: flex;
+  background-color: $bg-silver;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: 100vh;
   width: 100vw;
 }
 
@@ -14,14 +15,11 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 60vh;
   text-align: center;
 
-  &__image {
-    width: 55px;
-    margin-bottom: 2rem;
-  }
-
   &__title {
+    margin-top: 25px;
     color: $tertiary;
     font-size: 2rem;
   }

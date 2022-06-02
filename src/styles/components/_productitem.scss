@@ -1,8 +1,8 @@
 /* ======================================== */
-/* =========== ModelMainScreen ============ */
+/* ============= ProductItem ============== */
 /* ======================================== */
 
-.modelmainscreen {
+.productitem {
   //
   &__image {
     height: 166px;
@@ -36,8 +36,7 @@
     }
 
     &-button {
-      border: none;
-      background: transparent;
+      //
       img {
         width: 30px;
         height: 30px;

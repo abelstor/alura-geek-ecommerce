@@ -1,35 +1,58 @@
+import { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+import { AuthContext } from '../context/authContext';
+import { CartContext } from '../context/cartContext';
+import { MyOrderList } from '../components/MyOrderList';
 import { SearchBar } from '../components/SearchBar';
-import geek from '../assets/icons/geek.png';
-import logo from '../assets/icons/icon.png';
-import alura from '../assets/icons/alura.png';
+import { Logo } from '../components/Logo';
+import { Menu } from './Menu';
+
 import searchIcon from '../assets/icons/search.png';
 import shopCar from '../assets/icons/icon_shopping_cart.svg';
 
 export const Navbar = () => {
 
+    const { user } = useContext(AuthContext);
+    const { cart } = useContext(CartContext);
+
+    const [toggle, setToggle] = useState(true);
+    const [toggleOrder, setToggleOrder] = useState(false)
+
+    const items = cart.cart.length;
+
+    const handleToggle = () => {
+        setToggle(!toggle);
+    }
+
+    useEffect(() => {
+        if (user.logged) return setToggle(false);
+    }, [user])
+
+
     return (
         <nav className="navbar">
-            <Link
-                to="/"
-                className="navbar__brand pointer">
-                <img className="navbar__brand-logo" src={logo} alt="logo" />
-                <img className="navbar__brand-icons" src={alura} alt="alura" />
-                <img className="navbar__brand-icons" src={geek} alt="geek" />
-            </Link>
+            <Logo />
             <SearchBar />
-            <button className="navbar__login pointer">
-                <Link to="login"> Login </Link>
-            </button>
             <div className="navbar__search pointer">
                 <img className="navbar__search-icon" src={searchIcon} alt="search" />
             </div>
-            <div
-                className="navbar__shopping">
-                <img src={shopCar} alt="shopping cart" />
-                <div>2</div>
+            <div className="pointer">
+                {toggle && <Menu />}
             </div>
+            {
+                (user.logged)
+                    ?
+                    <li className="navbar__email pointer" onClick={handleToggle}> {user.name} </li>
+                    :
+                    <Link to="login" className="navbar__login"> Login </Link>
+            }
+            <div className="navbar__shopping pointer"
+                onClick={() => setToggleOrder(!toggleOrder)}>
+                <img src={shopCar} alt="shopping cart" />
+                {items > 0 && <div>{items}</div>}
+            </div>
+            {toggleOrder && <MyOrderList />}
         </nav>
     )
 }

@@ -17,7 +17,7 @@
 }
 
 @media screen and (max-width: 991px) {
-  .mainscreen__items > .modelmainscreen:nth-child(n + 5) {
+  .mainscreen__items > .productitem:nth-child(n + 5) {
     visibility: hidden;
     display: none;
   }

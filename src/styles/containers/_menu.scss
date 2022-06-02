@@ -1,0 +1,42 @@
+/* ======================================== */
+/* ================= Menu ================= */
+/* ======================================== */
+
+.menu {
+  width: 360px;
+  background-color: $bg-white;
+  box-sizing: border-box;
+  height: 192px;
+  border: 1px solid $secondary;
+  border-radius: 6px 0 0 6px;
+  padding: 24px 48px;
+  position: absolute;
+  top: 72px;
+  right: 0;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu ul li {
+  text-align: end;
+}
+.menu ul li:nth-child(1),
+.menu ul li:nth-child(2) {
+  font-weight: bold;
+}
+.menu ul li:last-child {
+  padding-top: 20px;
+  border-top: 1px solid $secondary;
+}
+.menu ul li:last-child p {
+  // color: $bg-green;
+  font-size: 16px;
+}
+.menu ul li p {
+  color: $secondary;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+}

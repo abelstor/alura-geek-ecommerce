@@ -11,30 +11,21 @@
   justify-content: space-around;
   // position: static;
 
-  &__brand {
-    align-items: center;
-    display: flex;
-
-    &-logo {
-      margin-right: 3px;
-      width: 24.74px;
-    }
-
-    &-icons {
-      width: 39.74px;
-    }
-  }
-
   &__login {
     align-items: center;
-    background-color: $bg-white;
+    // background-color: $secondary;
     border: 1.5px solid $secondary;
-    color: $secondary;
+    color: $bg-white;
+    font-weight: 500;
     display: flex;
     font-size: 14px;
-    height: 40px;
+    height: 38px;
     justify-content: center;
-    width: 130px;
+    width: 110px;
+    &:hover {
+      background-color: $bg-white;
+      color: $secondary;
+    }
   }
 
   &__search {
@@ -44,6 +35,13 @@
     &-icon {
       height: 20.05px;
       width: 20.05px;
+    }
+  }
+
+  &__email {
+    list-style: none;
+    &:hover {
+      color: $secondary;
     }
   }
 

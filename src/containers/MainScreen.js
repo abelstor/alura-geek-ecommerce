@@ -1,7 +1,7 @@
 import { starWarsList, consolesList, diversosList } from '../helpers/itemsList';
 
-import { ModelMainScreen } from '../components/ModelMainScreen';
-import { ModelHeaderScreen } from '../components/ModelHeaderScreen';
+import { ProductItem } from '../components/ProductItem';
+import { HeaderItem } from '../components/HeaderItem';
 
 export const MainScreen = () => {
 
@@ -12,28 +12,28 @@ export const MainScreen = () => {
     return (
         <div className="mainscreen">
             <div className="container">
-                <ModelHeaderScreen title={starWars} />
+                <HeaderItem title={starWars} />
                 <div className="mainscreen__items">
                     {starWarsList.map((item) => (
-                        <ModelMainScreen
+                        <ProductItem
                             key={item.id}
                             {...item}
                         />
                     ))}
                 </div>
-                <ModelHeaderScreen title={consoles} />
+                <HeaderItem title={consoles} />
                 <div className="mainscreen__items">
                     {consolesList.map((item) => (
-                        <ModelMainScreen
+                        <ProductItem
                             key={item.id}
                             {...item}
                         />
                     ))}
                 </div>
-                <ModelHeaderScreen title={various} />
+                <HeaderItem title={various} />
                 <div className="mainscreen__items">
                     {diversosList.map((item) => (
-                        <ModelMainScreen
+                        <ProductItem
                             key={item.id}
                             {...item}
                         />

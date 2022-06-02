@@ -1,0 +1,26 @@
+/* ======================================== */
+/* ================= Logo ================= */
+/* ======================================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__brand {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      margin-right: 3px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo__brand-icon {
+    margin: 0;
+  }
+  .logo__brand-geek {
+    display: none;
+  }
+}

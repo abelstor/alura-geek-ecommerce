@@ -1,15 +1,13 @@
 import { Link } from 'react-router-dom';
 
-import control from '../assets/icons/icon.png';
+import { Logo } from '../components/Logo';
 
 export const NotFound = () => {
 
     return (
         <div className="notfound__container">
             <div className="notfound">
-                <img
-                    className="notfound__image"
-                    src={control} alt="control" />
+                <Logo />
                 <h1 className="notfound__title">
                     Se supone que no deberías estar aquí...
                 </h1>

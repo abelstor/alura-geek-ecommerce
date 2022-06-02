@@ -1,8 +1,5 @@
+import { Logo } from '../components/Logo';
 import { FooterForm } from '../components/FooterForm';
-
-import logo from '../assets/icons/icon.png';
-import alura from '../assets/icons/alura.png';
-import geek from '../assets/icons/geek.png';
 
 export const Footer = () => {
 
@@ -13,9 +10,7 @@ export const Footer = () => {
             <div className="footer__high">
                 <div className="footer__about">
                     <div className="footer__about-logo">
-                        <img src={logo} alt="logo" style={{ 'marginRight': '5px' }} />
-                        <img src={alura} alt="alura" />
-                        <img src={geek} alt="geek" />
+                        <Logo />
                     </div>
                     <div className="footer__about-content">
                         <p> Quienes Somos </p>
