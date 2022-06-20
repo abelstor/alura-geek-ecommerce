@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import { types } from '../types/types';
 import { CartContext } from '../context/cartContext';
@@ -39,7 +40,9 @@ export const ProductItem = ({ id, image, name, price }) => {
                     <img src={addToCartImage} alt="bt add to cart" />
                 </figure>
             </div>
-            <p className="productitem__item-text">Ver Producto</p>
+            <Link to={`/product/${id}`}>
+                <p className="productitem__item-text pointer">Ver Producto</p>
+            </Link>
         </div>
     )
 }

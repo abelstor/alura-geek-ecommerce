@@ -1,0 +1,48 @@
+/* ======================================== */
+/* =========== ProductEditItem ============ */
+/* ======================================== */
+
+.productedititem {
+  //
+  &__image {
+    height: 166px;
+    width: 156px;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__delete {
+    position: absolute;
+    margin-left: 85px;
+    margin-top: 5px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__item {
+    //
+
+    &-name {
+      color: $tertiary;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &-price {
+      color: $tertiary;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &-text {
+      color: $secondary;
+      font-size: 15px;
+      font-weight: 700;
+    }
+  }
+}

@@ -25,7 +25,7 @@ export const MyOrder = ({ id, image, name, price }) => {
             <img
                 className="pointer"
                 onClick={handleClose}
-                src={iconClose} alt={iconClose} />
+                src={iconClose} alt={iconClose} style={{ width: "18px" }} />
         </div>
     )
 }

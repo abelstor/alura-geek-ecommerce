@@ -17,13 +17,16 @@ import switchConsole from '../assets/images/switch2.png';
 import tetris from '../assets/images/tetris2.png';
 import xbox from '../assets/images/xbox2.png';
 
-export const starWarsList = [
+export const geekItems = [
+
+    // Categories: starWars, consoles, various
 
     {
         'id': 1009165,
         'name': 'Imperial Cup',
         'description': 'Earth´s Mightiest Heroes joined forces to take on threats that were too big for any one hero to tackle. With a roster th',
         'image': `${imperialCup}`,
+        'category': 'starWars',
         'price': 15.95,
     },
     {
@@ -31,6 +34,7 @@ export const starWarsList = [
         'name': 'Dark Face',
         'description': 'Bitten by a radioactive spider, high school student Peter Parker gained the speed, strength and powers of a spider. Adop',
         'image': `${darkFace}`,
+        'category': 'starWars',
         'price': 45.50,
     },
     {
@@ -38,6 +42,7 @@ export const starWarsList = [
         'name': 'Master Yoda',
         'description': 'Bitten by a radioactive spider, high school student Peter Parker gained the speed, strength and powers of a spider. Adop',
         'image': `${yodaOrange}`,
+        'category': 'starWars',
         'price': 60.30,
     },
     {
@@ -45,6 +50,7 @@ export const starWarsList = [
         'name': 'Imperial Soldier',
         'description': 'Vowing to serve his country any way he could, young Steve Rogers took the super soldier serum to become Americas one-ma',
         'image': `${imperial}`,
+        'category': 'starWars',
         'price': 55.10,
     },
     {
@@ -52,6 +58,7 @@ export const starWarsList = [
         'name': 'Mini Yoda',
         'description': 'Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian or',
         'image': `${yoda}`,
+        'category': 'starWars',
         'price': 35.40,
     },
     {
@@ -59,17 +66,15 @@ export const starWarsList = [
         'name': 'Dark Vader',
         'description': 'Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian or',
         'image': `${dark}`,
+        'category': 'starWars',
         'price': 127.45,
     },
-]
-
-export const consolesList = [
-
     {
         'id': 1009664,
         'name': 'Xbox Control',
         'description': 'As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjoln',
         'image': `${controlXbox}`,
+        'category': 'consoles',
         'price': 235.45,
     },
     {
@@ -77,6 +82,7 @@ export const consolesList = [
         'name': 'Console',
         'description': 'While Eddie Brock’s academic career seemed to take off, his personal life was in shambles due to his quick temper and in',
         'image': `${consoleBlue}`,
+        'category': 'consoles',
         'price': 755.15,
     },
     {
@@ -84,6 +90,7 @@ export const consolesList = [
         'name': 'Nintendo',
         'description': 'While Eddie Brock’s academic career seemed to take off, his personal life was in shambles due to his quick temper and in',
         'image': `${nintendo}`,
+        'category': 'consoles',
         'price': 285.25,
     },
     {
@@ -91,6 +98,7 @@ export const consolesList = [
         'name': 'Switch Control',
         'description': 'Arguably the greatest and certainly the most horrific creation of scientific genius Dr. Henry Pym, Ultron is a criminall',
         'image': `${switchConsole}`,
+        'category': 'consoles',
         'price': 215.65,
     },
     {
@@ -98,6 +106,7 @@ export const consolesList = [
         'name': 'Xbox',
         'description': 'Arguably the greatest and certainly the most horrific creation of scientific genius Dr. Henry Pym, Ultron is a criminall',
         'image': `${xbox}`,
+        'category': 'consoles',
         'price': 532.45,
 
     },
@@ -106,18 +115,15 @@ export const consolesList = [
         'name': 'Tetris',
         'description': 'Arguably the greatest and certainly the most horrific creation of scientific genius Dr. Henry Pym, Ultron is a criminall',
         'image': `${tetris}`,
+        'category': 'consoles',
         'price': 25.26,
     },
-
-]
-
-export const diversosList = [
-
     {
         'id': 1009368,
         'name': 'Atari',
         'description': 'Wounded, captured and forced to build a weapon by his enemies, billionaire industrialist Tony Stark instead created an a',
         'image': `${atari}`,
+        'category': 'various',
         'price': 32.45,
     },
     {
@@ -125,6 +131,7 @@ export const diversosList = [
         'name': 'Gamer',
         'description': 'Arguably the greatest and certainly the most horrific creation of scientific genius Dr. Henry Pym, Ultron is a criminall',
         'image': `${gamer}`,
+        'category': 'various',
         'price': 1.05,
 
     },
@@ -133,6 +140,7 @@ export const diversosList = [
         'name': 'Sonic',
         'description': 'Arguably the greatest and certainly the most horrific creation of scientific genius Dr. Henry Pym, Ultron is a criminall',
         'image': `${sonic}`,
+        'category': 'various',
         'price': 28.29,
     },
     {
@@ -140,6 +148,7 @@ export const diversosList = [
         'name': 'Radio',
         'description': 'As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjoln',
         'image': `${radio}`,
+        'category': 'various',
         'price': 99.78,
     },
     {
@@ -147,6 +156,7 @@ export const diversosList = [
         'name': 'Virtual Reality',
         'description': 'Arguably the greatest and certainly the most horrific creation of scientific genius Dr. Henry Pym, Ultron is a criminall',
         'image': `${gamerReality}`,
+        'category': 'various',
         'price': 384.13,
     },
     {
@@ -154,6 +164,7 @@ export const diversosList = [
         'name': 'Pikachu',
         'description': 'Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the',
         'image': `${pikachu}`,
+        'category': 'various',
         'price': 12.45,
     },
 ]

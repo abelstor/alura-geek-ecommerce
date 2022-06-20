@@ -1,0 +1,46 @@
+/* ======================================== */
+/* =============== Products =============== */
+/* ======================================== */
+
+.products {
+  background-color: $bg-silver;
+  padding: 0 0 1rem 0;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0.5rem 1rem;
+
+    &-title {
+      color: $tertiary;
+      font-size: 22px;
+    }
+
+    &-button {
+      background-color: $secondary;
+      color: $primary;
+      border: none;
+      font-size: 14px;
+      height: 40px;
+      margin-top: 0.5rem;
+      max-width: 144px;
+      padding: 0 16px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(152px, 2fr));
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .products__items > .productitem:nth-child(n + 5) {
+    visibility: hidden;
+    display: none;
+  }
+}

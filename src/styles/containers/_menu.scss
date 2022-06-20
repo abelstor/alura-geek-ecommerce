@@ -10,9 +10,22 @@
   border: 1px solid $secondary;
   border-radius: 6px 0 0 6px;
   padding: 24px 48px;
-  position: absolute;
-  top: 72px;
+  // top: 72px;
+  top: 0;
   right: 0;
+  z-index: 901;
+  position: fixed;
+
+  &__arrow {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__arrow img {
+    transform: rotate(180deg);
+    margin-right: 14px;
+    left: 0;
+  }
 }
 .menu ul {
   list-style: none;

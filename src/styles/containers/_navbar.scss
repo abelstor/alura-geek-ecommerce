@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: row;
   height: 72px;
-  justify-content: space-around;
+  justify-content: space-evenly;
   // position: static;
 
   &__login {
@@ -64,8 +64,14 @@
   }
 }
 
+@media screen and (max-width: 720px) {
+  .tooglesearch {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 720px) {
-  .navbar__search-icon {
+  .navbar__search {
     display: none;
   }
 }

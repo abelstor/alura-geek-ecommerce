@@ -1,38 +1,42 @@
-import { starWarsList, consolesList, diversosList } from '../helpers/itemsList';
+import { geekItems } from '../helpers/geekItems';
 
 import { ProductItem } from '../components/ProductItem';
 import { HeaderItem } from '../components/HeaderItem';
 
 export const MainScreen = () => {
 
-    const starWars = 'Star Wars';
-    const consoles = 'Consolas';
-    const various = 'Diversos';
+    const items = (category) => {
+        return geekItems.filter(item => item.category.includes(category));
+    }
+
+    const starWarsTitle = 'Star Wars';
+    const consolesTitle = 'Consolas';
+    const variousTitle = 'Diversos';
 
     return (
         <div className="mainscreen">
             <div className="container">
-                <HeaderItem title={starWars} />
+                <HeaderItem title={starWarsTitle} />
                 <div className="mainscreen__items">
-                    {starWarsList.map((item) => (
+                    {items('starWars').map((item) => (
                         <ProductItem
                             key={item.id}
                             {...item}
                         />
                     ))}
                 </div>
-                <HeaderItem title={consoles} />
+                <HeaderItem title={consolesTitle} />
                 <div className="mainscreen__items">
-                    {consolesList.map((item) => (
+                    {items('consoles').map((item) => (
                         <ProductItem
                             key={item.id}
                             {...item}
                         />
                     ))}
                 </div>
-                <HeaderItem title={various} />
+                <HeaderItem title={variousTitle} />
                 <div className="mainscreen__items">
-                    {diversosList.map((item) => (
+                    {items('various').map((item) => (
                         <ProductItem
                             key={item.id}
                             {...item}

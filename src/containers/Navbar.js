@@ -5,6 +5,7 @@ import { AuthContext } from '../context/authContext';
 import { CartContext } from '../context/cartContext';
 import { MyOrderList } from '../components/MyOrderList';
 import { SearchBar } from '../components/SearchBar';
+import { SearchIcon } from '../components/SearchIcon';
 import { Logo } from '../components/Logo';
 import { Menu } from './Menu';
 
@@ -18,6 +19,7 @@ export const Navbar = () => {
 
     const [toggle, setToggle] = useState(true);
     const [toggleOrder, setToggleOrder] = useState(false)
+    const [searchBar, setSearchBar] = useState(false)
 
     const items = cart.cart.length;
 
@@ -29,16 +31,23 @@ export const Navbar = () => {
         if (user.logged) return setToggle(false);
     }, [user])
 
+    const handleSearch = () => {
+        setSearchBar(!searchBar);
+    }
 
     return (
         <nav className="navbar">
             <Logo />
-            <SearchBar />
-            <div className="navbar__search pointer">
+            <div className="tooglesearch">
+                <SearchBar />
+            </div>
+            <div onClick={handleSearch}
+                className="navbar__search pointer">
                 <img className="navbar__search-icon" src={searchIcon} alt="search" />
             </div>
+            {searchBar && <SearchIcon searchBar={searchBar} setSearchBar={setSearchBar} />}
             <div className="pointer">
-                {toggle && <Menu />}
+                {toggle && <Menu toggle={toggle} setToggle={setToggle} />}
             </div>
             {
                 (user.logged)
@@ -52,7 +61,8 @@ export const Navbar = () => {
                 <img src={shopCar} alt="shopping cart" />
                 {items > 0 && <div>{items}</div>}
             </div>
-            {toggleOrder && <MyOrderList />}
+            {toggleOrder && <MyOrderList toggleOrder={toggleOrder}
+                setToggleOrder={setToggleOrder} />}
         </nav>
     )
 }

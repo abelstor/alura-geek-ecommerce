@@ -9,7 +9,7 @@
   align-items: center;
   background-color: $bg-silver;
   padding: 0 16px;
-  border-radius: 25px;
+  // border-radius: 25px;
   width: 272px;
   height: 40px;
 
@@ -27,15 +27,8 @@
   }
 
   &__icon {
-    display: flex;
     border-style: none;
     background: none;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .searchbar {
-    display: none;
   }
 }
 
@@ -44,6 +37,7 @@
     width: 300px;
   }
 }
+
 @media screen and (min-width: 992px) {
   .searchbar {
     width: 393px;

@@ -6,6 +6,7 @@
 @import "./pages/home";
 @import "./pages/login";
 @import "./pages/notfound";
+@import "./pages/products";
 
 // Containers
 @import "./containers/footer";
@@ -20,3 +21,7 @@
 @import "./components/productitem";
 @import "./components/searchbar";
 @import "./components/myorder";
+@import "./components/mysearch";
+@import "./components/productedititem";
+@import "./components/productdetail";
+@import "./components/searchicon";

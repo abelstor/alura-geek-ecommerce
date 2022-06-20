@@ -1,0 +1,25 @@
+/* ======================================== */
+/* ============== SearchIcon ============== */
+/* ======================================== */
+
+.searchicon {
+  background-color: $bg-white;
+  border: 1px solid $secondary;
+  border-radius: 6px 0 0 6px;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 24px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 360px;
+  z-index: 1000;
+
+  // height: 100vh;
+  //   display: grid;
+  //   place-items: center;
+}
+.title {
+  // font-size: var(--lg);
+  margin-bottom: 40px;
+}

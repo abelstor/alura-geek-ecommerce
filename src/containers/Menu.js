@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 import { types } from '../types/types';
 import { AuthContext } from '../context/authContext';
+import arrowLeft from '../assets/icons/flechita.svg';
 
-export const Menu = () => {
+export const Menu = ({ toggle, setToggle }) => {
 
     const navigate = useNavigate();
 
@@ -15,6 +16,10 @@ export const Menu = () => {
         dispatchUser({
             type: types.logout
         });
+    }
+
+    const handleToggle = () => {
+        setToggle(!toggle);
     }
 
     return user.logged && (
@@ -28,7 +33,10 @@ export const Menu = () => {
                     <p>My account</p>
                 </li>
 
-                <li>
+                <li className="menu__arrow">
+                    <img
+                        onClick={handleToggle}
+                        src={arrowLeft} alt={arrowLeft} style={{ width: "16px" }} className="pointer" />
                     <p
                         onClick={handleLogout}>
                         Sign out

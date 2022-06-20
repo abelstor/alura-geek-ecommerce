@@ -6,6 +6,12 @@
   display: flex;
   flex-direction: column;
 
+  &__high {
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-blue;
+  }
+
   &__about {
     display: flex;
     flex-direction: column;
@@ -24,20 +30,12 @@
   }
 
   &__about-logo {
-    display: flex;
-    align-items: center;
     margin-bottom: 10px;
   }
 
   &__contact {
     display: flex;
     flex-direction: column;
-  }
-
-  &__high {
-    display: flex;
-    flex-direction: column;
-    background-color: $bg-blue;
   }
 
   &__low {
@@ -62,5 +60,59 @@
 
   &:hover {
     color: $secondary;
+  }
+}
+
+@media screen and (min-width: 468px) {
+  .footer {
+    //
+    &__high {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: baseline;
+    }
+
+    &__contact {
+      width: 60%;
+    }
+
+    &__about {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+
+      &-content {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    //
+    &__high {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: baseline;
+    }
+
+    &__contact {
+      width: 40%;
+    }
+
+    &__about {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-direction: row;
+      width: 50%;
+
+      &-content {
+        text-align: left;
+      }
+    }
   }
 }

@@ -1,12 +1,10 @@
-import { Footer } from '../containers/Footer';
+import { Link } from 'react-router-dom';
 import { MainScreen } from '../containers/MainScreen';
-import { Navbar } from '../containers/Navbar';
 
 export const Home = () => {
 
     return (
         <>
-            <Navbar />
             <div className="home">
                 <div className="home__banner">
                     <h1 className="home__banner-title">
@@ -15,13 +13,14 @@ export const Home = () => {
                     <p className="home__banner-text">
                         Productos seleccionados con 33% de descuento
                     </p>
-                    <button className="home__banner-button pointer">
-                        Ver Consolas
-                    </button>
+                    <Link to="/products">
+                        <button className="home__banner-button pointer">
+                            Ver Consolas
+                        </button>
+                    </Link>
                 </div>
             </div>
             <MainScreen />
-            <Footer />
         </>
     )
 }
