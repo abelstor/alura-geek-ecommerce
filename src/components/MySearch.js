@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { geekItems } from '../helpers/geekItems';
 
-export const MySearch = ({ search }) => {
+export const MySearch = ({ search, hiddenSearch }) => {
 
     const filteredResult = useMemo(() =>
         geekItems.filter((result) => {
@@ -16,7 +16,9 @@ export const MySearch = ({ search }) => {
                     {filteredResult.map(geek => (
                         <Link key={geek.id} to={`/product/${geek.id}`}>
                             <li
-                                className="mysearch__content-result pointer">
+                                className="mysearch__content-result pointer"
+                                onClick={hiddenSearch}
+                            >
                                 {geek.name}
                             </li>
                         </Link>

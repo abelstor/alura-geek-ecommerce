@@ -16,7 +16,7 @@ export const SearchIcon = ({ searchBar, setSearchBar }) => {
                     src={arrowLeft} alt={arrowLeft} style={{ width: "16px" }} className="pointer" />
                 <h1 className="title">Buscar 👀</h1>
             </div>
-            <SearchBar />
+            <SearchBar handleBar={handleBar} />
         </div>
     )
 }

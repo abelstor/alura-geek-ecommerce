@@ -79,7 +79,7 @@ export const geekItems = [
     },
     {
         'id': 1011128,
-        'name': 'Console',
+        'name': 'Game Console',
         'description': 'While Eddie Brock’s academic career seemed to take off, his personal life was in shambles due to his quick temper and in',
         'image': `${consoleBlue}`,
         'category': 'consoles',

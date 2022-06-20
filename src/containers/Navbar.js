@@ -52,7 +52,8 @@ export const Navbar = () => {
             {
                 (user.logged)
                     ?
-                    <li className="navbar__email pointer" onClick={handleToggle}> {user.name} </li>
+                    <li className="navbar__email pointer" onClick={handleToggle}> {user.name.slice(0, user.name.indexOf('@'))}
+                    </li>
                     :
                     <Link to="login" className="navbar__login"> Login </Link>
             }

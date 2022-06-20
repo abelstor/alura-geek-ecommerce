@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import * as yup from 'yup';
 
 export const FooterForm = () => {
 
@@ -6,7 +7,15 @@ export const FooterForm = () => {
 
     const initialValues = { name: '', email: '', message: '' };
     const [formState, setFormState] = useState(initialValues);
+    const [error, setError] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const { name, email, message } = formState;
+
+    const formValidation = yup.object().shape({
+        name: yup.string().required('El nombre es requerido').min(3, 'El nombre debe tener al menos 3 caracteres'),
+        email: yup.string().email('Correo no válido').required('El correo es requerido'),
+        message: yup.string().required('El mensaje es requerido').min(10, 'El mensaje debe tener al menos 10 caracteres')
+    });
 
     const handleChange = ({ target }) => {
         setFormState({
@@ -17,17 +26,27 @@ export const FooterForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         const formData = new FormData(form.current);
         const data = {
             name: formData.get('name'),
             email: formData.get('email'),
             message: formData.get('message')
         }
-        console.log('data', data); //TODO: send formState to backend
-        setFormState(initialValues);
+
+        formValidation.validate(data).then(valid => {
+            if (valid) {
+                setFormState(initialValues);
+                setError('');
+                setIsSubmitting(true);
+            }
+        }).catch(err => {
+            setError(err.errors[0]);
+        });
     }
 
-    return (
+    return !isSubmitting
+        ?
         <section className="footerform__container">
             <h1 className="footerform__title">Hable con nosotros</h1>
             <form
@@ -49,7 +68,6 @@ export const FooterForm = () => {
                         htmlFor="name">
                         Nombre
                     </label>
-                    <span className="input-message-error">Este campo no es válido</span>
                 </div>
                 <div className="input-container">
                     <input
@@ -67,7 +85,6 @@ export const FooterForm = () => {
                         htmlFor="email">
                         Correo
                     </label>
-                    <span className="input-message-error">Este campo no es válido</span>
                 </div>
                 <div className="input-container">
                     <textarea
@@ -85,6 +102,7 @@ export const FooterForm = () => {
                         htmlFor="message">
                         Escribe tu mensage
                     </label>
+                    {error && <span className="input-message-error">{error}</span>}
                 </div>
                 <button
                     onClick={handleSubmit}
@@ -93,5 +111,12 @@ export const FooterForm = () => {
                 </button>
             </form>
         </section>
-    )
+        :
+        <div style={{ display: "grid", placeItems: "center" }}>
+            <h1
+                className="footerform__title"
+                style={{ padding: "2.5rem" }}>
+                Gracias por contactarnos!
+            </h1>
+        </div>
 }
