@@ -34,16 +34,8 @@ export const AppEcommerce = () => {
     return (
         <CartContext.Provider value={{ cart, dispatchCart }}>
             <AuthContext.Provider value={{ user, dispatchUser }}>
-                <AppRouter />
+                <AppRouter basename={process.env.PUBLIC_URL} />
             </AuthContext.Provider>
         </CartContext.Provider>
     )
 }
-
-/*
-    <Router basename={process.env.PUBLIC_URL}>
-        <AppRouter />
-    </Router>
-
-    "homepage": "https://abelstor.github.io/ecommerce",
-*/
