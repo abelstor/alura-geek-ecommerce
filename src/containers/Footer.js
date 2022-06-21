@@ -31,7 +31,9 @@ export const Footer = () => {
                     &copy; {anio} Alura Geek || All rights reserved
                 </p>
                 <div className="footer__low-description">
-                    Developed by&nbsp;
+                    Developed
+                    <span> with ❤ </span>
+                    by&nbsp;
                     <a className="abelstor" href="https://abelstor.github.io/portfolio" target="blank">
                         abelstor
                     </a>

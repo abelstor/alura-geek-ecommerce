@@ -36,7 +36,7 @@ export const FooterForm = () => {
 
         formValidation.validate(data).then(valid => {
             if (valid) {
-                setFormState(initialValues);
+                // setFormState(initialValues);
                 setError('');
                 setIsSubmitting(true);
             }
@@ -115,8 +115,9 @@ export const FooterForm = () => {
         <div style={{ display: "grid", placeItems: "center" }}>
             <h1
                 className="footerform__title"
-                style={{ padding: "2.5rem" }}>
-                Gracias por contactarnos!
+                style={{ padding: "2.5rem", textAlign: "center", lineHeight: "35px" }}>
+                Gracias por contactarnos ❤
+                <p>{name} !</p>
             </h1>
         </div>
 }

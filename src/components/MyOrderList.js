@@ -21,7 +21,7 @@ export const MyOrderList = ({ toggleOrder, setToggleOrder }) => {
         <img
           onClick={handleOrder}
           src={arrowLeft} alt={arrowLeft} style={{ width: "16px" }} className="pointer" />
-        <h1 className="title">My order 🎁</h1>
+        <h1 className="title">My order 🛒</h1>
       </div>
       <div className="my-order-content">
         {cart.cart.map(item => (

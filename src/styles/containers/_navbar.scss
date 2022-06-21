@@ -9,11 +9,9 @@
   flex-direction: row;
   height: 72px;
   justify-content: space-evenly;
-  // position: static;
 
   &__login {
     align-items: center;
-    // background-color: $secondary;
     border: 1.5px solid $secondary;
     color: $bg-white;
     font-weight: 500;
