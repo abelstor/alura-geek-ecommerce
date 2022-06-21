@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b5f2d01c.css",
-    "main.js": "/static/js/main.cb9f5d1e.js",
+    "main.js": "/static/js/main.1ea67c7b.js",
     "static/media/atari2.png": "/static/media/atari2.de7e8488e61034db9f3e.png",
     "static/media/yoda2.png": "/static/media/yoda2.8d306187667e58cf7046.png",
     "static/media/gamer-reality2.png": "/static/media/gamer-reality2.fa547a3ffbc1f2bfef01.png",
@@ -26,10 +26,10 @@
     "index.html": "/index.html",
     "static/media/flechita.svg": "/static/media/flechita.5634ade2a3a788cac60b3d06a4242587.svg",
     "main.b5f2d01c.css.map": "/static/css/main.b5f2d01c.css.map",
-    "main.cb9f5d1e.js.map": "/static/js/main.cb9f5d1e.js.map"
+    "main.1ea67c7b.js.map": "/static/js/main.1ea67c7b.js.map"
   },
   "entrypoints": [
     "static/css/main.b5f2d01c.css",
-    "static/js/main.cb9f5d1e.js"
+    "static/js/main.1ea67c7b.js"
   ]
 }
