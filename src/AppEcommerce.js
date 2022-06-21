@@ -32,10 +32,12 @@ export const AppEcommerce = () => {
     }, [user])
 
     return (
-        <CartContext.Provider value={{ cart, dispatchCart }}>
-            <AuthContext.Provider value={{ user, dispatchUser }}>
-                <AppRouter basename={process.env.PUBLIC_URL} />
-            </AuthContext.Provider>
-        </CartContext.Provider>
+        <div basename={"/"}>
+            <CartContext.Provider value={{ cart, dispatchCart }}>
+                <AuthContext.Provider value={{ user, dispatchUser }}>
+                    <AppRouter />
+                </AuthContext.Provider>
+            </CartContext.Provider>
+        </div>
     )
 }
